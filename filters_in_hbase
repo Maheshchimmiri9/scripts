@@ -1,0 +1,104 @@
+
+FILTERS:
+
+
+KeyOnlyFilter
+
+This filter does not take any arguments. It returns only the key component of each key-value.
+
+KeyOnlyFilter ()
+
+FirstKeyOnlyFilter
+
+This filter doesntt take any arguments. It returns only the first key-value from each row.
+
+FirstKeyOnlyFilter ()
+
+prefixfilter:
+
+This filter takes one argument  a prefix of a row key. It returns only those key-values present in a row that starts with the specified row prefix
+
+PrefixFilter (<row_prefix>)
+
+ColumnPrefixFilter
+
+This filter takes one argument  a column prefix. It returns only those key-values present in a column that starts with the specified column prefix. The column prefix must be of the form qualifier
+
+
+ColumnPrefixFilter(<column_prefix>)
+
+MultipleColumnPrefixFilter
+
+This filter takes a list of column prefixes. It returns key-values that are present in a column that starts with any of the specified column prefixes. Each of the column prefixes must be of the form qualifier
+
+
+MultipleColumnPrefixFilter(â€˜<column_prefix>,<column_prefix>,….<column_prefix>)
+
+
+ColumnCountGetFilter
+
+This filter takes one argument  a limit. It returns the first limit number of columns in the table.
+
+
+ColumnCountGetFilter(<limit>)
+
+
+PageFilter
+
+This filter takes one argument  a page size. It returns page size number of rows from the table.
+
+
+PageFilter (<page_size>)
+
+InclusiveStopFilter
+
+This filter takes one argument  a row key on which to stop scanning. It returns all key-values present in rows up to and including the specified row.
+
+
+InclusiveStopFilter(<stop_row_key>)
+
+
+Family Filter(Qualifier Filter)
+
+This filter takes a compare operator and a comparator. It compares each qualifier name with the comparator using the compare operator and if the comparison returns true, it returns all the key-values in that column.
+
+
+QualifierFilter (<compareOp>, <qualifier_comparator>)
+
+
+ValueFilter
+
+This filter takes a compare operator and a comparator. It compares each value with the comparator using the compare operator and if the comparison returns true, it returns that key-value.
+
+
+ValueFilter (<compareOp>,‘<value_comparator>’) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
